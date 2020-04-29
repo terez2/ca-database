@@ -1,0 +1,596 @@
+{
+  "product": {
+    "ingredients_hierarchy": [],
+    "image_ingredients_url": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_en.12.400.jpg",
+    "unknown_ingredients_n": 0,
+    "allergens_from_user": "(en) ",
+    "created_t": 1492173816,
+    "pnns_groups_2": "unknown",
+    "lang_debug_tags": [],
+    "additives_original_tags": [],
+    "image_small_url": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_en.9.200.jpg",
+    "traces": "",
+    "traces_hierarchy": [],
+    "images": {
+      "1": {
+        "sizes": {
+          "100": {
+            "h": 75,
+            "w": 100
+          },
+          "400": {
+            "h": 300,
+            "w": 400
+          },
+          "full": {
+            "w": 648,
+            "h": 486
+          }
+        },
+        "uploaded_t": "1492173820",
+        "uploader": "openfoodfacts-contributors"
+      },
+      "2": {
+        "sizes": {
+          "100": {
+            "h": 75,
+            "w": 100
+          },
+          "400": {
+            "w": 400,
+            "h": 300
+          },
+          "full": {
+            "h": 486,
+            "w": 648
+          }
+        },
+        "uploaded_t": "1492173822",
+        "uploader": "openfoodfacts-contributors"
+      },
+      "3": {
+        "uploader": "openfoodfacts-contributors",
+        "sizes": {
+          "100": {
+            "h": 75,
+            "w": 100
+          },
+          "400": {
+            "h": 300,
+            "w": 400
+          },
+          "full": {
+            "h": 486,
+            "w": 648
+          }
+        },
+        "uploaded_t": "1492173822"
+      },
+      "4": {
+        "sizes": {
+          "100": {
+            "h": 100,
+            "w": 48
+          },
+          "400": {
+            "h": 400,
+            "w": 192
+          },
+          "full": {
+            "h": 1200,
+            "w": 575
+          }
+        },
+        "uploaded_t": 1536235854,
+        "uploader": "kiliweb"
+      },
+      "5": {
+        "uploader": "kiliweb",
+        "uploaded_t": 1536235857,
+        "sizes": {
+          "100": {
+            "h": 40,
+            "w": 100
+          },
+          "400": {
+            "h": 160,
+            "w": 400
+          },
+          "full": {
+            "w": 3009,
+            "h": 1200
+          }
+        }
+      },
+      "ingredients_cs": {
+        "x2": -1,
+        "rev": "6",
+        "y2": -1,
+        "y1": -1,
+        "x1": -1,
+        "normalize": null,
+        "orientation": null,
+        "geometry": "0x0--1--1",
+        "white_magic": null,
+        "ocr": 1,
+        "angle": 0,
+        "imgid": "3",
+        "sizes": {
+          "100": {
+            "w": 100,
+            "h": 75
+          },
+          "200": {
+            "w": 200,
+            "h": 150
+          },
+          "400": {
+            "w": 400,
+            "h": 300
+          },
+          "full": {
+            "h": 486,
+            "w": 648
+          }
+        }
+      },
+      "ingredients_fr": {
+        "sizes": {
+          "100": {
+            "w": 100,
+            "h": 40
+          },
+          "200": {
+            "h": 80,
+            "w": 200
+          },
+          "400": {
+            "h": 160,
+            "w": 400
+          },
+          "full": {
+            "h": 1200,
+            "w": 3009
+          }
+        },
+        "imgid": "5",
+        "angle": null,
+        "ocr": 1,
+        "white_magic": "0",
+        "orientation": null,
+        "geometry": "0x0-0-0",
+        "y1": null,
+        "normalize": "0",
+        "x1": null,
+        "y2": null,
+        "rev": "13",
+        "x2": null
+      },
+      "front_fr": {
+        "x2": null,
+        "rev": "10",
+        "y1": null,
+        "x1": null,
+        "normalize": "0",
+        "y2": null,
+        "geometry": "0x0-0-0",
+        "white_magic": "0",
+        "imgid": "4",
+        "angle": null,
+        "sizes": {
+          "100": {
+            "w": 48,
+            "h": 100
+          },
+          "200": {
+            "w": 96,
+            "h": 200
+          },
+          "400": {
+            "w": 192,
+            "h": 400
+          },
+          "full": {
+            "w": 575,
+            "h": 1200
+          }
+        }
+      },
+      "front_en": {
+        "rev": "9",
+        "x2": "-1",
+        "y2": "-1",
+        "x1": "-1",
+        "y1": "-1",
+        "normalize": null,
+        "white_magic": null,
+        "geometry": "0x0--2--3",
+        "sizes": {
+          "100": {
+            "w": 48,
+            "h": 100
+          },
+          "200": {
+            "h": 200,
+            "w": 96
+          },
+          "400": {
+            "w": 192,
+            "h": 400
+          },
+          "full": {
+            "h": 1200,
+            "w": 575
+          }
+        },
+        "angle": 0,
+        "imgid": "4"
+      },
+      "front_cs": {
+        "y1": -1,
+        "normalize": null,
+        "x1": -1,
+        "y2": -1,
+        "rev": "3",
+        "x2": -1,
+        "sizes": {
+          "100": {
+            "w": 100,
+            "h": 75
+          },
+          "200": {
+            "w": 200,
+            "h": 150
+          },
+          "400": {
+            "h": 300,
+            "w": 400
+          },
+          "full": {
+            "w": 648,
+            "h": 486
+          }
+        },
+        "imgid": "1",
+        "angle": 0,
+        "white_magic": null,
+        "geometry": "0x0--1--1"
+      },
+      "ingredients_en": {
+        "sizes": {
+          "100": {
+            "w": 100,
+            "h": 40
+          },
+          "200": {
+            "h": 80,
+            "w": 200
+          },
+          "400": {
+            "w": 400,
+            "h": 160
+          },
+          "full": {
+            "w": 3009,
+            "h": 1200
+          }
+        },
+        "imgid": "5",
+        "angle": 0,
+        "ocr": 1,
+        "white_magic": null,
+        "geometry": "0x0--7--7",
+        "orientation": null,
+        "y1": "-1",
+        "normalize": null,
+        "x1": "-1",
+        "y2": "-1",
+        "rev": "12",
+        "x2": "-1"
+      }
+    },
+    "misc_tags": [
+      "en:nutriscore-not-computed"
+    ],
+    "interface_version_created": "20150316.jqm2",
+    "nova_group_tags": [
+      "not-applicable"
+    ],
+    "countries_hierarchy": [
+      "en:czech-republic",
+      "en:france"
+    ],
+    "lang": "en",
+    "languages_codes": {
+      "fr": 2,
+      "en": 3,
+      "cs": 2
+    },
+    "product_quantity": "500",
+    "interface_version_modified": "20150316.jqm2",
+    "ingredients": [],
+    "max_imgid": "5",
+    "brands": "plzeňský prazdroj",
+    "data_quality_errors_tags": [],
+    "states_hierarchy": [
+      "en:to-be-completed",
+      "en:nutrition-facts-completed",
+      "en:ingredients-to-be-completed",
+      "en:expiration-date-to-be-completed",
+      "en:packaging-code-to-be-completed",
+      "en:characteristics-to-be-completed",
+      "en:categories-to-be-completed",
+      "en:brands-completed",
+      "en:packaging-to-be-completed",
+      "en:quantity-completed",
+      "en:product-name-completed",
+      "en:photos-to-be-validated",
+      "en:photos-uploaded"
+    ],
+    "additives_old_tags": [],
+    "quantity": "500 ml",
+    "codes_tags": [
+      "code-13",
+      "8594404009520",
+      "859440400952x",
+      "85944040095xx",
+      "8594404009xxx",
+      "859440400xxxx",
+      "85944040xxxxx",
+      "8594404xxxxxx",
+      "859440xxxxxxx",
+      "85944xxxxxxxx",
+      "8594xxxxxxxxx",
+      "859xxxxxxxxxx",
+      "85xxxxxxxxxxx",
+      "8xxxxxxxxxxxx"
+    ],
+    "no_nutrition_data": "",
+    "ingredients_original_tags": [],
+    "data_quality_bugs_tags": [],
+    "languages": {
+      "en:czech": 2,
+      "en:french": 2,
+      "en:english": 3
+    },
+    "image_ingredients_thumb_url": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_en.12.100.jpg",
+    "nova_group_debug": "no nova group when the product does not have ingredients",
+    "last_edit_dates_tags": [
+      "2018-09-06",
+      "2018-09",
+      "2018"
+    ],
+    "data_sources_tags": [
+      "app-yuka",
+      "apps"
+    ],
+    "minerals_prev_tags": [],
+    "nutrition_data_per_debug_tags": [],
+    "product_name": "Birell pomelo et grep",
+    "product_name_debug_tags": [],
+    "states": "en:to-be-completed, en:nutrition-facts-completed, en:ingredients-to-be-completed, en:expiration-date-to-be-completed, en:packaging-code-to-be-completed, en:characteristics-to-be-completed, en:categories-to-be-completed, en:brands-completed, en:packaging-to-be-completed, en:quantity-completed, en:product-name-completed, en:photos-to-be-validated, en:photos-uploaded",
+    "editors_tags": [
+      "kiliweb",
+      "openfoodfacts-contributors",
+      "yuka.WXA4TkZJWWlpL0FJcWM5di93cmUzdE5mNFllUlcyeTJDT0JQSVE9PQ"
+    ],
+    "other_nutritional_substances_tags": [],
+    "ingredients_text_with_allergens": null,
+    "ingredients_from_palm_oil_tags": [],
+    "nutrition_data_per": "100g",
+    "amino_acids_prev_tags": [],
+    "code": "8594404009520",
+    "last_modified_t": 1536235858,
+    "traces_from_ingredients": "",
+    "complete": 0,
+    "additives_debug_tags": [],
+    "_keywords": [
+      "prazdroj",
+      "plzeňsky",
+      "grep",
+      "et",
+      "pomelo",
+      "birell"
+    ],
+    "ingredients_ids_debug": [],
+    "ingredients_text_with_allergens_en": null,
+    "allergens_from_ingredients": "",
+    "image_front_url": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_en.9.400.jpg",
+    "languages_hierarchy": [
+      "en:czech",
+      "en:french",
+      "en:english"
+    ],
+    "unknown_nutrients_tags": [],
+    "vitamins_tags": [],
+    "quantity_debug_tags": [],
+    "brands_debug_tags": [],
+    "nutriments": {
+      "carbohydrates_unit": "",
+      "fat_unit": "",
+      "saturated-fat_100g": 0,
+      "proteins_100g": 0,
+      "saturated-fat_unit": "",
+      "salt_value": 0,
+      "sugars_unit": "",
+      "proteins_value": 0,
+      "sodium_unit": "g",
+      "energy_unit": "kcal",
+      "energy": 142,
+      "sugars": 6.2,
+      "salt_unit": "",
+      "sodium": 0,
+      "sugars_value": 6.2,
+      "energy-kcal": 142,
+      "energy_100g": 142,
+      "fat_100g": 0,
+      "carbohydrates": 8,
+      "salt": 0,
+      "energy-kcal_unit": "kcal",
+      "energy-kcal_value": 34,
+      "sugars_100g": 6.2,
+      "saturated-fat_value": 0,
+      "energy_value": 34,
+      "saturated-fat": 0,
+      "proteins_unit": "",
+      "fat_value": 0,
+      "energy-kcal_100g": 142,
+      "carbohydrates_100g": 8,
+      "fat": 0,
+      "carbohydrates_value": 8,
+      "sodium_100g": 0,
+      "salt_100g": 0,
+      "sodium_value": 0,
+      "proteins": 0
+    },
+    "pnns_groups_1_tags": [
+      "unknown",
+      "missing-category"
+    ],
+    "countries": "Czech Republic, France",
+    "image_ingredients_small_url": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_en.12.200.jpg",
+    "pnns_groups_2_tags": [
+      "unknown",
+      "missing-category"
+    ],
+    "pnns_groups_1": "unknown",
+    "countries_debug_tags": [],
+    "last_modified_by": null,
+    "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_en.9.100.jpg",
+    "ingredients_that_may_be_from_palm_oil_tags": [],
+    "nutrition_data_prepared_per": "100g",
+    "entry_dates_tags": [
+      "2017-04-14",
+      "2017-04",
+      "2017"
+    ],
+    "countries_tags": [
+      "en:czech-republic",
+      "en:france"
+    ],
+    "brands_tags": [
+      "plzeňsky-prazdroj"
+    ],
+    "additives_prev_original_tags": [],
+    "ingredients_debug": [],
+    "countries_lc": "en",
+    "data_quality_warnings_tags": [],
+    "vitamins_prev_tags": [],
+    "traces_tags": [],
+    "rev": 13,
+    "nutrition_score_debug": "no score when the product does not have a category",
+    "correctors_tags": [
+      "yuka.WXA4TkZJWWlpL0FJcWM5di93cmUzdE5mNFllUlcyeTJDT0JQSVE9PQ",
+      "openfoodfacts-contributors"
+    ],
+    "photographers_tags": [
+      "openfoodfacts-contributors",
+      "kiliweb"
+    ],
+    "last_image_dates_tags": [
+      "2018-09-06",
+      "2018-09",
+      "2018"
+    ],
+    "nutrient_levels": {},
+    "nucleotides_prev_tags": [],
+    "update_key": "ingredients20200405",
+    "nucleotides_tags": [],
+    "data_sources": "App - yuka, Apps",
+    "ingredients_tags": [],
+    "minerals_tags": [],
+    "checkers_tags": [],
+    "selected_images": {
+      "ingredients": {
+        "display": {
+          "cs": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_cs.6.400.jpg",
+          "en": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_en.12.400.jpg",
+          "fr": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_fr.13.400.jpg"
+        },
+        "thumb": {
+          "cs": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_cs.6.100.jpg",
+          "fr": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_fr.13.100.jpg",
+          "en": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_en.12.100.jpg"
+        },
+        "small": {
+          "cs": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_cs.6.200.jpg",
+          "fr": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_fr.13.200.jpg",
+          "en": "https://static.openfoodfacts.org/images/products/859/440/400/9520/ingredients_en.12.200.jpg"
+        }
+      },
+      "front": {
+        "display": {
+          "cs": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_cs.3.400.jpg",
+          "fr": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_fr.10.400.jpg",
+          "en": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_en.9.400.jpg"
+        },
+        "thumb": {
+          "fr": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_fr.10.100.jpg",
+          "en": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_en.9.100.jpg",
+          "cs": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_cs.3.100.jpg"
+        },
+        "small": {
+          "en": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_en.9.200.jpg",
+          "fr": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_fr.10.200.jpg",
+          "cs": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_cs.3.200.jpg"
+        }
+      }
+    },
+    "data_quality_tags": [],
+    "additives_tags": [],
+    "languages_tags": [
+      "en:czech",
+      "en:french",
+      "en:english",
+      "en:3",
+      "en:multilingual"
+    ],
+    "ingredients_text_with_allergens_cs": null,
+    "nutrient_levels_tags": [],
+    "image_front_small_url": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_en.9.200.jpg",
+    "creator": "openfoodfacts-contributors",
+    "informers_tags": [
+      "openfoodfacts-contributors",
+      "yuka.WXA4TkZJWWlpL0FJcWM5di93cmUzdE5mNFllUlcyeTJDT0JQSVE9PQ",
+      "kiliweb"
+    ],
+    "allergens_tags": [],
+    "id": "8594404009520",
+    "data_quality_info_tags": [],
+    "completeness": 0.483333333333333,
+    "nutrition_grades_tags": [
+      "not-applicable"
+    ],
+    "last_editor": null,
+    "_id": "8594404009520",
+    "amino_acids_tags": [],
+    "image_url": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_en.9.400.jpg",
+    "allergens_hierarchy": [],
+    "traces_from_user": "(en) ",
+    "product_name_en": "Birell pomelo et grep",
+    "last_image_t": 1536235858,
+    "image_thumb_url": "https://static.openfoodfacts.org/images/products/859/440/400/9520/front_en.9.100.jpg",
+    "allergens": "",
+    "ingredients_text_debug": null,
+    "sortkey": 201536235858,
+    "lc": "en",
+    "states_tags": [
+      "en:to-be-completed",
+      "en:nutrition-facts-completed",
+      "en:ingredients-to-be-completed",
+      "en:expiration-date-to-be-completed",
+      "en:packaging-code-to-be-completed",
+      "en:characteristics-to-be-completed",
+      "en:categories-to-be-completed",
+      "en:brands-completed",
+      "en:packaging-to-be-completed",
+      "en:quantity-completed",
+      "en:product-name-completed",
+      "en:photos-to-be-validated",
+      "en:photos-uploaded"
+    ]
+  },
+  "status": 1,
+  "code": "8594404009520",
+  "status_verbose": "product found"
+}

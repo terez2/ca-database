@@ -1,0 +1,13 @@
+	services:
+		-
+			class: App\Models\Entities\ItemEntity
+			inject: yes
+		-
+			class: App\Models\Entities\TimeActivityEntity
+			inject: yes
+		-
+			class: App\Models\Entities\ActivityEntity
+			inject: yes
+		-
+			class: App\Models\ActivitiesModel
+			inject: yes

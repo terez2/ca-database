@@ -1,0 +1,4 @@
+	services:
+		-
+			class: App\Services\ItemService
+			inject: yes

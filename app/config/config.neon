@@ -1,0 +1,52 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+
+    includes:
+        - models.neon
+        - services.neon
+        - presenters.neon
+        - parameters.neon
+
+    parameters:
+
+
+    application:
+    	errorPresenter: ApiError
+    	mapping:
+    		*: App\*Module\Presenters\*Presenter
+
+
+    session:
+        expiration: 14 days
+
+
+    database:
+        dsn: 'mysql:host=127.0.0.1;dbname=test'
+        user:
+        password:
+        options:
+            lazy: yes
+
+
+    services:
+        routerFactory:
+        	class: App\Router\RouterFactory
+
+        router: @routerFactory::createRouter()
+
+        jsonValidator:
+        	factory: App\Utils\Json\JsonValidator(%appDir%/Models/schemas/)
+
+        attributesValidator:
+             class: App\Utils\Json\AttributesValidator
+
+    extensions:
+       apiRouter: Ublaboo\ApiRouter\DI\ApiRouterExtension
+
+    decorator:
+        # klíč je název třídy nebo rozhraní
+        App\ApiModule\V1Module\Presenters\ModuleBasePresenter:
+            setup:
+                - setCorsUrl(%cors.url%)

@@ -1,0 +1,8 @@
+    parameters:
+
+            cors:
+                url:
+                    - http://localhost:4200
+                    - http://localhost
+            appDir:
+                - App
