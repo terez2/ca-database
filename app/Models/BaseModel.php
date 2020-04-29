@@ -29,28 +29,41 @@ class BaseModel
         return $this->convertToJSON($rawData);
     }
 
-    public function find($tableName, $barcode)
-    {
-        $rawData = $this->mongoClient->selectCollection(self::DATABASE_NAME, $tableName, $this->typeMap)->findOne(['barcode' => $barcode]);
-        return $this->convertToJSON([$rawData]);
-    }
-
     public function insert($tableName, array $values)
     {
         return $this->mongoClient->selectCollection(self::DATABASE_NAME, $tableName)->insertOne($values);
     }
 
+    public function find($tableName, $id)
+    {
+        $rawData = $this->mongoClient->selectCollection(self::DATABASE_NAME, $tableName, $this->typeMap)->find(['id' => $id])->toArray();
+        if (empty($rawData)) {
+            $rawData = [];
+        }
+        return $this->convertToJSON($rawData);
+    }
+
+    public function findById($tableName, $id)
+    {
+        $rawData = $this->mongoClient->selectCollection(self::DATABASE_NAME, $tableName, $this->typeMap)->find(['id' => $id])->toArray();
+        if (empty($rawData)) {
+           return [];
+        }
+        return $this->convertToJSON($rawData)[0];
+    }
+
     private function convertToJSON(array $rawData)
     {
         $result = [];
-        foreach ($rawData as $d) {
-            try {
-                $d = Json::decode(Json::encode($d), Json::FORCE_ARRAY);
-
-                $d['_id'] = $d['_id']['$oid'];
-                array_push($result, $d);
-            } catch (JsonException $e) {
+        foreach ($rawData as $item) {
+            foreach ($item as $key => $value) {
+                if ($key === '_id') {
+                    $item[$key] = (string)$value;
+                } else  {
+                    $item[$key] = $value;
+                }
             }
+            array_push($result, $item);
         }
         return $result;
     }

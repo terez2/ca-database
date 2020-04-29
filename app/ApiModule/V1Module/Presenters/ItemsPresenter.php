@@ -7,6 +7,7 @@ use App\Models\ActivitiesModel;
 use App\Models\Entities\ActivityEntity;
 use App\Models\Entities\ItemEntity;
 use App\Models\Entities\TimeActivityEntity;
+use App\Models\ItemsModel;
 use App\Services\ItemService;
 use App\Utils\Json\JsonValidator;
 use Nette\Http\IResponse;
@@ -22,6 +23,13 @@ use Ublaboo\ApiRouter\ApiRoute;
  */
 class ItemsPresenter extends ModuleBasePresenter
 {
+
+    /**
+     * @inject
+     * @var ItemsModel
+     */
+    public $itemsModel;
+
 
     /**
      * @inject
@@ -59,32 +67,33 @@ class ItemsPresenter extends ModuleBasePresenter
      */
     public function actionRead($barcode)
     {
-
         $timeActivities = [];
-        $activities = $this->activitiesModel->getTableData('activities');
+        $activities = $this->activitiesModel->getTableData($this->activitiesModel::TABLE);
         $product = $this->itemService->getProduct($barcode);
 
         if ($activities && $product) {
-            $itemQuantity = $this->itemService->getProductQuantity($product);
-            $itemCalories = $this->itemService->getProductCalories($product) * $itemQuantity;
-            $itemName = $this->itemService->getProductName($product);
-            $itemImage = $this->itemService->getProductImage($product);
+            $item = $this->itemsModel->findById($this->itemsModel::ITEMS_TABLE, $barcode);
+            if (!$item) {
+                $itemQuantity = $this->itemService->getProductQuantity($product);
+                $itemCalories = $this->itemService->getProductCalories($product) * $itemQuantity;
+                $itemName = $this->itemService->getProductName($product);
+                $itemImage = $this->itemService->getProductImage($product);
+                for ($i = 0; $i < count($activities); $i++) {
+                    $actEntity = new TimeActivityEntity($activities[$i]);
+                    $actEntity->setTime($itemCalories / $actEntity->getEnergy());
+                    array_push($timeActivities, $actEntity);
+                }
+                $item = new ItemEntity();
+                $item->setActivities($timeActivities);
+                $item->setId($barcode); //todo
+                $item->setCalories($itemCalories);
+                $item->setName($itemName);
+                $item->setImage($itemImage);
 
-            for ($i = 0; $i < count($activities); $i++) {
-                $actEntity = new TimeActivityEntity($activities[$i]);
-                $actEntity->setTime($itemCalories / $actEntity->getEnergy());
-                array_push($timeActivities, $actEntity);
+                $itemArray = $item->toArray();
+                $this->itemsModel->insert($this->itemsModel::ITEMS_TABLE, $itemArray);
             }
-
-            $nutritionItem = new ItemEntity();
-            $nutritionItem->setActivities($timeActivities);
-            $nutritionItem->setId($barcode); //todo
-            $nutritionItem->setCalories($itemCalories);
-            $nutritionItem->setName($itemName);
-            $nutritionItem->setImage($itemImage);
-
-            $this->sendJson($nutritionItem);
-            // todo add to my database
+            $this->sendJson($item);
         } else {
             throw new \ApiException('Activities not found.', IResponse::S404_NOT_FOUND);
         }

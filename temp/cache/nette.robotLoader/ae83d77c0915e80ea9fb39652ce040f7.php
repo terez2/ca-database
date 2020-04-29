@@ -5,7 +5,7 @@ return array (
     'App\\ApiModule\\V1Module\\Presenters\\ItemsPresenter' => 
     array (
       'file' => '/var/www/html/app/ApiModule/V1Module/Presenters/ItemsPresenter.php',
-      'time' => 1587573918,
+      'time' => 1588157953,
     ),
     'App\\ApiModule\\V1Module\\Presenters\\ModuleBasePresenter' => 
     array (
@@ -60,7 +60,7 @@ return array (
     'App\\Models\\BaseModel' => 
     array (
       'file' => '/var/www/html/app/Models/BaseModel.php',
-      'time' => 1587560968,
+      'time' => 1588158103,
     ),
     'App\\Models\\Entities\\ActivityEntity' => 
     array (
@@ -81,6 +81,11 @@ return array (
     array (
       'file' => '/var/www/html/app/Models/Entities/TimeActivityEntity.php',
       'time' => 1587565764,
+    ),
+    'App\\Models\\ItemsModel' => 
+    array (
+      'file' => '/var/www/html/app/Models/ItemsModel.php',
+      'time' => 1588157076,
     ),
     'App\\Model\\UserManager' => 
     array (
@@ -168,5 +173,7 @@ return array (
     'App\\ApiModule\\V1Module\\Presenters\\IResponse' => 1,
     'JsonSchema\\Uri\\UriRetriever' => 1,
     'App\\ApiModule\\V1Module\\Presenters\\BadRequestException' => 1,
+    8594404009520 => 1,
+    54491472 => 1,
   ),
 );
