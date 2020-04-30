@@ -82,11 +82,26 @@ class ItemService
         $calories = $this->getProductCalories() * $itemQuantity;
         $name = $this->getProductName();
         $image = $this->getProductImage();
+        $ingredients = $this->getProductIngredients();
 
         $activities = $this->getActivities($activitiesTable, $calories);
         $item = new ItemEntity();
-        $item->setAllAttributes($barcode, $name, $activities, $calories, $image);
+        $item->setAllAttributes($barcode, $name, $activities, $calories, $image, $ingredients);
         return $item->toArray();
+    }
+
+    public function getProductIngredients()
+    {
+        try {
+            $ingredients = $this->getProductAttribute($this->product, 'ingredients_text_with_allergens');
+            if(!$ingredients){
+                return '';
+            } else {
+                return $ingredients;
+            }
+        } catch (\ApiException $e) {
+            return '';
+        }
     }
 
     public function getProductCalories()
@@ -97,7 +112,7 @@ class ItemService
 
     public function getProductQuantity()
     {
-        return $this->getProductAttribute($this->product, 'product_quantity') / 100; //todo ml?
+        return $this->getProductAttribute($this->product, 'product_quantity') / 100;
     }
 
     public function getProductName()
