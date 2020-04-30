@@ -32,7 +32,7 @@ abstract class BaseEntity
         if (in_array($key, $this->getAllowedValues())) {
             return $this->{$key};
         } else {
-            throw new \ApiException(get_class($this) . ' has not '  . $key . ' attribute.', IResponse::S404_NOT_FOUND);
+            throw new \ApiException(get_class($this) . ' has not ' . $key . ' attribute.', IResponse::S404_NOT_FOUND);
         }
     }
 

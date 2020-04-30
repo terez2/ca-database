@@ -11,3 +11,6 @@
 		-
 			class: App\Models\ActivitiesModel
 			inject: yes
+		-
+			class: App\Models\ItemsModel
+			inject: yes

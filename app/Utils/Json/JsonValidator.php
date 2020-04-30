@@ -4,8 +4,6 @@
 namespace App\Utils\Json;
 
 use Nette\SmartObject;
-use JsonSchema\Uri\UriRetriever;
-use JsonSchema\Validator;
 
 class JsonValidator
 {

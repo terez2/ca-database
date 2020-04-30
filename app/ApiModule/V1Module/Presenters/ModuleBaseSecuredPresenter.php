@@ -24,13 +24,6 @@ abstract class ModuleBaseSecuredPresenter extends ModuleBasePresenter
      */
     public $httpResponse;
 
-//    /**
-//     * @inject
-//     * @var ApiTokenModel
-//     */
-//    public $tokenModel;
-
-
     /**
      * @throws \ApiException
      * @throws \Nette\Application\AbortException
