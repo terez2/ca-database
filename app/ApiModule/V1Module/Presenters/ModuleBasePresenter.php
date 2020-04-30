@@ -4,6 +4,8 @@ namespace App\ApiModule\V1Module\Presenters;
 
 
 use App\Presenters\BasePresenter;
+use Nette\Application\Responses\JsonResponse;
+use Nette\Http\IResponse;
 use Nette\Http\Request;
 use Nette\Http\Response;
 
@@ -62,6 +64,18 @@ abstract class ModuleBasePresenter extends BasePresenter
     protected function sendNoContent() {
         $this->httpResponse->setCode(IResponse::S204_NO_CONTENT);
         $this->terminate();
+    }
+
+    /**
+     * @param $message
+     * @param IResponse $code
+     * @throws \Nette\Application\AbortException
+     */
+    protected function sendError($message, $code) {
+        $response = ['message' => $message, 'code' => $code];
+
+        $this->httpResponse->setCode($code);
+        $this->sendResponse(new JsonResponse($response));
     }
 
     /**

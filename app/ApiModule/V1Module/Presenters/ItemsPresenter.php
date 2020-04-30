@@ -65,13 +65,16 @@ class ItemsPresenter extends ModuleBasePresenter
      *       }
      * )
      * @param $param
-     * @throws \ApiException
+     *
+     *
      * @throws AbortException
      */
     public function actionRead($param)
     {
         $activitiesTable = $this->activitiesModel->getTableData($this->activitiesModel::TABLE);
-        if (!$activitiesTable) throw new \ApiException('Activities not found.', IResponse::S404_NOT_FOUND);
+        if (!$activitiesTable) {
+            $this->sendError('Activities not found.',IResponse::S404_NOT_FOUND);
+        }
 
         if ($this->basicFilters->areNumbers($param)) {
             $item = $this->itemsModel->findFirstByKey($this->itemsModel::ITEMS_TABLE, 'id', $param);
@@ -81,7 +84,9 @@ class ItemsPresenter extends ModuleBasePresenter
             }
         } else {
             $item = $this->itemsModel->findFirstByRegex($this->itemsModel::ITEMS_TABLE, 'name', $param);
-            if (!$item) throw new \ApiException('Product not found.', IResponse::S404_NOT_FOUND);
+            if (!$item) {
+                $this->sendError('Product not found.',IResponse::S404_NOT_FOUND);
+            }
         }
         $this->sendJson($item);
     }
