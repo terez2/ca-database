@@ -19,7 +19,6 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 			'06' => true,
 			'07' => true,
 			'08' => true,
-			'09' => true,
 			'application.1' => true,
 			'application.2' => true,
 			'application.3' => true,
@@ -74,7 +73,7 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 		'Nette\Routing\RouteList' => [['routing.router']],
 		'Nette\Routing\Router' => [['routing.router']],
 		'Nette\Application\IRouter' => [['routing.router']],
-		'ArrayAccess' => [2 => ['routing.router', '07', '08', '09', 'application.1', 'application.2']],
+		'ArrayAccess' => [2 => ['routing.router', '07', '08', 'application.1', 'application.2']],
 		'Countable' => [2 => ['routing.router']],
 		'IteratorAggregate' => [2 => ['routing.router']],
 		'Traversable' => [2 => ['routing.router']],
@@ -94,24 +93,23 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 		'App\Models\ActivitiesModel' => [['04']],
 		'App\Models\ItemsModel' => [['05']],
 		'App\Services\ItemService' => [['06']],
-		'App\Presenters\BasePresenter' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\Application\UI\Presenter' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\Application\UI\Control' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\Application\UI\Component' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\ComponentModel\Container' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\ComponentModel\Component' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\Application\UI\IRenderable' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\ComponentModel\IContainer' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\ComponentModel\IComponent' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\Application\UI\ISignalReceiver' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
-		'Nette\Application\UI\IStatePersistent' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'App\ApiModule\V1Module\Presenters\ModuleBasePresenter' => [2 => ['07', '08']],
+		'App\Presenters\BasePresenter' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'Nette\Application\UI\Presenter' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'Nette\Application\UI\Control' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'Nette\Application\UI\Component' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'Nette\ComponentModel\Container' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'Nette\ComponentModel\Component' => [2 => ['07', '08', 'application.1', 'application.2']],
 		'Nette\Application\IPresenter' => [
-			2 => ['07', '08', '09', 'application.1', 'application.2', 'application.3', 'application.4', 'application.5'],
+			2 => ['07', '08', 'application.1', 'application.2', 'application.3', 'application.4', 'application.5'],
 		],
-		'App\Presenters\HomepagePresenter' => [2 => ['07']],
-		'App\ApiModule\V1Module\Presenters\ModuleBasePresenter' => [2 => ['08', '09']],
-		'App\ApiModule\V1Module\Presenters\ItemsPresenter' => [2 => ['08']],
-		'App\ApiModule\V1Module\Presenters\OptionsPresenter' => [2 => ['09']],
+		'Nette\Application\UI\IStatePersistent' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'Nette\Application\UI\ISignalReceiver' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'Nette\ComponentModel\IComponent' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'Nette\ComponentModel\IContainer' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'Nette\Application\UI\IRenderable' => [2 => ['07', '08', 'application.1', 'application.2']],
+		'App\ApiModule\V1Module\Presenters\ItemsPresenter' => [2 => ['07']],
+		'App\ApiModule\V1Module\Presenters\OptionsPresenter' => [2 => ['08']],
 		'App\Router\RouterFactory' => [['routerFactory']],
 		'App\Utils\Json\JsonValidator' => [['jsonValidator']],
 		'App\Utils\Json\AttributesValidator' => [['attributesValidator']],
@@ -181,25 +179,7 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 	}
 
 
-	public function createService07(): App\Presenters\HomepagePresenter
-	{
-		$service = new App\Presenters\HomepagePresenter;
-		$service->injectPrimary(
-			$this,
-			$this->getService('application.presenterFactory'),
-			$this->getService('routing.router'),
-			$this->getService('http.request'),
-			$this->getService('http.response'),
-			$this->getService('session.session'),
-			$this->getService('security.user'),
-			$this->getService('latte.templateFactory')
-		);
-		$service->invalidLinkMode = 5;
-		return $service;
-	}
-
-
-	public function createService08(): App\ApiModule\V1Module\Presenters\ItemsPresenter
+	public function createService07(): App\ApiModule\V1Module\Presenters\ItemsPresenter
 	{
 		$service = new App\ApiModule\V1Module\Presenters\ItemsPresenter;
 		$service->injectPrimary(
@@ -225,7 +205,7 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 	}
 
 
-	public function createService09(): App\ApiModule\V1Module\Presenters\OptionsPresenter
+	public function createService08(): App\ApiModule\V1Module\Presenters\OptionsPresenter
 	{
 		$service = new App\ApiModule\V1Module\Presenters\OptionsPresenter;
 		$service->injectPrimary(

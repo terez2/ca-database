@@ -87,15 +87,10 @@ return array (
       'file' => '/var/www/html/app/Presenters/ErrorPresenter.php',
       'time' => 1586612741,
     ),
-    'App\\Presenters\\HomepagePresenter' => 
-    array (
-      'file' => '/var/www/html/app/Presenters/HomepagePresenter.php',
-      'time' => 1587464851,
-    ),
     'App\\Router\\RouterFactory' => 
     array (
       'file' => '/var/www/html/app/Router/RouterFactory.php',
-      'time' => 1587548060,
+      'time' => 1588259182,
     ),
     'App\\Services\\ItemService' => 
     array (
@@ -105,22 +100,7 @@ return array (
     'App\\Utils\\Filters\\BasicFilters' => 
     array (
       'file' => '/var/www/html/app/Utils/Filters/BasicFilters.php',
-      'time' => 1588257802,
-    ),
-    'App\\Utils\\Http\\HttpClient' => 
-    array (
-      'file' => '/var/www/html/app/Utils/Http/HttpClient.php',
-      'time' => 1587457576,
-    ),
-    'App\\Utils\\Http\\Request' => 
-    array (
-      'file' => '/var/www/html/app/Utils/Http/Request.php',
-      'time' => 1587457505,
-    ),
-    'App\\Utils\\Http\\Response' => 
-    array (
-      'file' => '/var/www/html/app/Utils/Http/Response.php',
-      'time' => 1587457505,
+      'time' => 1588259710,
     ),
     'App\\Utils\\Json\\AttributesValidator' => 
     array (
@@ -130,7 +110,7 @@ return array (
     'App\\Utils\\Json\\JsonValidator' => 
     array (
       'file' => '/var/www/html/app/Utils/Json/JsonValidator.php',
-      'time' => 1587555833,
+      'time' => 1588259710,
     ),
   ),
   1 => 
