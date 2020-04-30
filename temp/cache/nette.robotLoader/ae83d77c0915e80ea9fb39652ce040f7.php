@@ -5,7 +5,7 @@ return array (
     'App\\ApiModule\\V1Module\\Presenters\\ItemsPresenter' => 
     array (
       'file' => '/var/www/html/app/ApiModule/V1Module/Presenters/ItemsPresenter.php',
-      'time' => 1588258958,
+      'time' => 1588260083,
     ),
     'App\\ApiModule\\V1Module\\Presenters\\ModuleBasePresenter' => 
     array (
@@ -15,7 +15,7 @@ return array (
     'App\\ApiModule\\V1Module\\Presenters\\ModuleBaseSecuredPresenter' => 
     array (
       'file' => '/var/www/html/app/ApiModule/V1Module/Presenters/ModuleBaseSecuredPresenter.php',
-      'time' => 1588258817,
+      'time' => 1588260083,
     ),
     'App\\ApiModule\\V1Module\\Presenters\\OptionsPresenter' => 
     array (
@@ -40,7 +40,7 @@ return array (
     'App\\Models\\BaseModel' => 
     array (
       'file' => '/var/www/html/app/Models/BaseModel.php',
-      'time' => 1588259090,
+      'time' => 1588260083,
     ),
     'App\\Models\\Entities\\ActivityEntity' => 
     array (
@@ -50,12 +50,12 @@ return array (
     'App\\Models\\Entities\\BaseEntity' => 
     array (
       'file' => '/var/www/html/app/Models/Entities/BaseEntity.php',
-      'time' => 1588259090,
+      'time' => 1588260083,
     ),
     'App\\Models\\Entities\\ItemEntity' => 
     array (
       'file' => '/var/www/html/app/Models/Entities/ItemEntity.php',
-      'time' => 1588255138,
+      'time' => 1588261682,
     ),
     'App\\Models\\Entities\\TimeActivityEntity' => 
     array (
@@ -65,7 +65,7 @@ return array (
     'App\\Models\\ItemsModel' => 
     array (
       'file' => '/var/www/html/app/Models/ItemsModel.php',
-      'time' => 1588259090,
+      'time' => 1588260083,
     ),
     'App\\Presenters\\ApiErrorPresenter' => 
     array (
@@ -90,17 +90,17 @@ return array (
     'App\\Router\\RouterFactory' => 
     array (
       'file' => '/var/www/html/app/Router/RouterFactory.php',
-      'time' => 1588259182,
+      'time' => 1588260083,
     ),
     'App\\Services\\ItemService' => 
     array (
       'file' => '/var/www/html/app/Services/ItemService.php',
-      'time' => 1588257802,
+      'time' => 1588261888,
     ),
     'App\\Utils\\Filters\\BasicFilters' => 
     array (
       'file' => '/var/www/html/app/Utils/Filters/BasicFilters.php',
-      'time' => 1588259710,
+      'time' => 1588260083,
     ),
     'App\\Utils\\Json\\AttributesValidator' => 
     array (
@@ -110,7 +110,7 @@ return array (
     'App\\Utils\\Json\\JsonValidator' => 
     array (
       'file' => '/var/www/html/app/Utils/Json/JsonValidator.php',
-      'time' => 1588259710,
+      'time' => 1588260083,
     ),
   ),
   1 => 
@@ -119,9 +119,11 @@ return array (
     'JsonSchema\\Uri\\UriRetriever' => 1,
     'App\\ApiModule\\V1Module\\Presenters\\BadRequestException' => 3,
     8594404009520 => 3,
-    54491472 => 1,
+    54491472 => 3,
     '5ea03033d8999ba9fae49b00' => 1,
     'App\\ApiModule\\V1Module\\Presenters\\UsersPresenter' => 1,
     'App\\Presenters\\ActivityPresenter' => 1,
+    3083680086936 => 1,
+    20198114 => 1,
   ),
 );

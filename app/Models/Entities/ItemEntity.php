@@ -94,13 +94,31 @@ class ItemEntity extends BaseEntity
     }
 
 
-    public function setAllAttributes($id, $name, $activities, $calories, $image)
+    /**
+     * @return string
+     * @throws \ApiException
+     */
+    public function getIngredients(): string
+    {
+        return $this->getAttribute('ingredients');
+    }
+
+    /**
+     * @param string $ingredients
+     */
+    public function setIngredients(string $ingredients): void
+    {
+        $this->addAttribute('ingredients', $ingredients);
+    }
+
+    public function setAllAttributes($id, $name, $activities, $calories, $image, $ingredients)
     {
         $this->setId($id);
         $this->setActivities($activities);
         $this->setName($name);
         $this->setCalories($calories);
         $this->setImage($image);
+        $this->setIngredients($ingredients);
 
     }
 
@@ -116,6 +134,7 @@ class ItemEntity extends BaseEntity
             'calories',
             'activities',
             'image',
+            'ingredients',
         ];
     }
 }
