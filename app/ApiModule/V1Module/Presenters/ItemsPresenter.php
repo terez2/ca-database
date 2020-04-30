@@ -10,6 +10,7 @@ use App\Utils\Filters\BasicFilters;
 use App\Utils\Json\JsonValidator;
 use Nette\Application\AbortException;
 use Nette\Http\IResponse;
+use Nette\Utils\JsonException;
 use Ublaboo\ApiRouter\ApiRoute; //DO NOT REMOVE!
 
 /**
@@ -79,7 +80,13 @@ class ItemsPresenter extends ModuleBasePresenter
         if ($this->basicFilters->areNumbers($param)) {
             $item = $this->itemsModel->findFirstByKey($this->itemsModel::ITEMS_TABLE, 'id', $param);
             if (!$item) {
-                $item = $this->itemService->getItem($param, $activitiesTable);
+                try {
+                    $item = $this->itemService->getItem($param, $activitiesTable);
+                } catch (\ApiException $e) {
+                    $this->sendError($e->getErrorMessage(), $e->getCode());
+                } catch (JsonException $e) {
+                    $this->sendError('Invalid JSON',IResponse::S400_BAD_REQUEST);
+                }
                 $this->itemsModel->insertToTable($this->itemsModel::ITEMS_TABLE, $item);
             }
         } else {

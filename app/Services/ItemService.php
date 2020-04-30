@@ -61,6 +61,12 @@ class ItemService
         return $this->product;
     }
 
+    /**
+     * @param $activitiesTable
+     * @param $calories
+     * @return array
+     * @throws \ApiException
+     */
     public function getActivities($activitiesTable, $calories)
     {
         $activities = [];
@@ -74,6 +80,13 @@ class ItemService
         return $activities;
     }
 
+    /**
+     * @param $barcode
+     * @param $activitiesTable
+     * @return array
+     * @throws \ApiException
+     * @throws \Nette\Utils\JsonException
+     */
     public function getItem($barcode, $activitiesTable)
     {
         $this->getProduct($barcode);
@@ -104,22 +117,38 @@ class ItemService
         }
     }
 
+    /**
+     * @return mixed
+     * @throws \ApiException
+     */
     public function getProductCalories()
     {
         $nutriments = $this->getProductAttribute($this->product, 'nutriments');
         return $this->getProductAttribute($nutriments, 'energy-kcal_value');
     }
 
+    /**
+     * @return float|int
+     * @throws \ApiException
+     */
     public function getProductQuantity()
     {
         return $this->getProductAttribute($this->product, 'product_quantity') / 100;
     }
 
+    /**
+     * @return mixed
+     * @throws \ApiException
+     */
     public function getProductName()
     {
         return $this->getProductAttribute($this->product, 'product_name');
     }
 
+    /**
+     * @return mixed
+     * @throws \ApiException
+     */
     public function getProductImage()
     {
         return $this->getProductAttribute($this->product, 'image_small_url');

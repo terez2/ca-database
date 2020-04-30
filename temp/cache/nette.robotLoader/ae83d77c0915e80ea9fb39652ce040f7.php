@@ -2,6 +2,16 @@
 return array (
   0 => 
   array (
+    'App\\ApiModule\\V1Module\\Presenters\\ItemsPresenter' => 
+    array (
+      'file' => '/var/www/html/app/ApiModule/V1Module/Presenters/ItemsPresenter.php',
+      'time' => 1588275010,
+    ),
+    'App\\ApiModule\\V1Module\\Presenters\\ModuleBasePresenter' => 
+    array (
+      'file' => '/var/www/html/app/ApiModule/V1Module/Presenters/ModuleBasePresenter.php',
+      'time' => 1588274280,
+    ),
     'App\\ApiModule\\V1Module\\Presenters\\ModuleBaseSecuredPresenter' => 
     array (
       'file' => '/var/www/html/app/ApiModule/V1Module/Presenters/ModuleBaseSecuredPresenter.php',
@@ -85,7 +95,7 @@ return array (
     'App\\Services\\ItemService' => 
     array (
       'file' => '/var/www/html/app/Services/ItemService.php',
-      'time' => 1588273068,
+      'time' => 1588274919,
     ),
     'App\\Utils\\Filters\\BasicFilters' => 
     array (
@@ -101,16 +111,6 @@ return array (
     array (
       'file' => '/var/www/html/app/Utils/Json/JsonValidator.php',
       'time' => 1588260083,
-    ),
-    'App\\ApiModule\\V1Module\\Presenters\\ItemsPresenter' => 
-    array (
-      'file' => '/var/www/html/app/ApiModule/V1Module/Presenters/ItemsPresenter.php',
-      'time' => 1588273932,
-    ),
-    'App\\ApiModule\\V1Module\\Presenters\\ModuleBasePresenter' => 
-    array (
-      'file' => '/var/www/html/app/ApiModule/V1Module/Presenters/ModuleBasePresenter.php',
-      'time' => 1588274036,
     ),
   ),
   1 => 
