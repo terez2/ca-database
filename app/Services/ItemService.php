@@ -84,7 +84,6 @@ class ItemService
         $image = $this->getProductImage();
 
         $activities = $this->getActivities($activitiesTable, $calories);
-        // todo solve name 54491472
         $item = new ItemEntity();
         $item->setAllAttributes($barcode, $name, $activities, $calories, $image);
         return $item->toArray();
