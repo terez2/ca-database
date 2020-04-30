@@ -2,8 +2,6 @@
 		-
 			class: App\Presenters\HomepagePresenter
 		-
-			class: App\ApiModule\V1Module\Presenters\UsersPresenter
-		-
 			class: App\ApiModule\V1Module\Presenters\ItemsPresenter
 		-
 			class: App\ApiModule\V1Module\Presenters\OptionsPresenter

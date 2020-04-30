@@ -20,13 +20,11 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 			'07' => true,
 			'08' => true,
 			'09' => true,
-			'010' => true,
 			'application.1' => true,
 			'application.2' => true,
 			'application.3' => true,
 			'application.4' => true,
 			'application.5' => true,
-			'application.6' => true,
 		],
 	];
 
@@ -76,9 +74,7 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 		'Nette\Routing\RouteList' => [['routing.router']],
 		'Nette\Routing\Router' => [['routing.router']],
 		'Nette\Application\IRouter' => [['routing.router']],
-		'ArrayAccess' => [
-			2 => ['routing.router', '07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
+		'ArrayAccess' => [2 => ['routing.router', '07', '08', '09', 'application.1', 'application.2']],
 		'Countable' => [2 => ['routing.router']],
 		'IteratorAggregate' => [2 => ['routing.router']],
 		'Traversable' => [2 => ['routing.router']],
@@ -98,67 +94,33 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 		'App\Models\ActivitiesModel' => [['04']],
 		'App\Models\ItemsModel' => [['05']],
 		'App\Services\ItemService' => [['06']],
-		'App\Presenters\BasePresenter' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\Application\UI\Presenter' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\Application\UI\Control' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\Application\UI\Component' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\ComponentModel\Container' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\ComponentModel\Component' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\Application\UI\IRenderable' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\ComponentModel\IContainer' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\ComponentModel\IComponent' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\Application\UI\ISignalReceiver' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
-		'Nette\Application\UI\IStatePersistent' => [
-			2 => ['07', '08', '09', '010', 'application.1', 'application.2', 'application.3'],
-		],
+		'App\Presenters\BasePresenter' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\Application\UI\Presenter' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\Application\UI\Control' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\Application\UI\Component' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\ComponentModel\Container' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\ComponentModel\Component' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\Application\UI\IRenderable' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\ComponentModel\IContainer' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\ComponentModel\IComponent' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\Application\UI\ISignalReceiver' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
+		'Nette\Application\UI\IStatePersistent' => [2 => ['07', '08', '09', 'application.1', 'application.2']],
 		'Nette\Application\IPresenter' => [
-			2 => [
-				'07',
-				'08',
-				'09',
-				'010',
-				'application.1',
-				'application.2',
-				'application.3',
-				'application.4',
-				'application.5',
-				'application.6',
-			],
+			2 => ['07', '08', '09', 'application.1', 'application.2', 'application.3', 'application.4', 'application.5'],
 		],
 		'App\Presenters\HomepagePresenter' => [2 => ['07']],
-		'App\ApiModule\V1Module\Presenters\ModuleBasePresenter' => [2 => ['08', '09', '010']],
-		'App\ApiModule\V1Module\Presenters\UsersPresenter' => [2 => ['08']],
-		'App\ApiModule\V1Module\Presenters\ItemsPresenter' => [2 => ['09']],
-		'App\ApiModule\V1Module\Presenters\OptionsPresenter' => [2 => ['010']],
+		'App\ApiModule\V1Module\Presenters\ModuleBasePresenter' => [2 => ['08', '09']],
+		'App\ApiModule\V1Module\Presenters\ItemsPresenter' => [2 => ['08']],
+		'App\ApiModule\V1Module\Presenters\OptionsPresenter' => [2 => ['09']],
 		'App\Router\RouterFactory' => [['routerFactory']],
 		'App\Utils\Json\JsonValidator' => [['jsonValidator']],
 		'App\Utils\Json\AttributesValidator' => [['attributesValidator']],
-		'App\Presenters\ActivityPresenter' => [2 => ['application.1']],
-		'App\Presenters\ApiErrorPresenter' => [2 => ['application.2']],
-		'App\Presenters\Error4xxPresenter' => [2 => ['application.3']],
-		'App\Presenters\ErrorPresenter' => [2 => ['application.4']],
-		'NetteModule\ErrorPresenter' => [2 => ['application.5']],
-		'NetteModule\MicroPresenter' => [2 => ['application.6']],
+		'App\Utils\Filters\BasicFilters' => [['basicFilter']],
+		'App\Presenters\ApiErrorPresenter' => [2 => ['application.1']],
+		'App\Presenters\Error4xxPresenter' => [2 => ['application.2']],
+		'App\Presenters\ErrorPresenter' => [2 => ['application.3']],
+		'NetteModule\ErrorPresenter' => [2 => ['application.4']],
+		'NetteModule\MicroPresenter' => [2 => ['application.5']],
 		'Ublaboo\ApiRouter\DI\ApiRoutesResolver' => [['apiRouter.resolver']],
 	];
 
@@ -237,29 +199,7 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 	}
 
 
-	public function createService08(): App\ApiModule\V1Module\Presenters\UsersPresenter
-	{
-		$service = new App\ApiModule\V1Module\Presenters\UsersPresenter;
-		$service->injectPrimary(
-			$this,
-			$this->getService('application.presenterFactory'),
-			$this->getService('routing.router'),
-			$this->getService('http.request'),
-			$this->getService('http.response'),
-			$this->getService('session.session'),
-			$this->getService('security.user'),
-			$this->getService('latte.templateFactory')
-		);
-		$service->jsonValidator = $this->getService('jsonValidator');
-		$service->httpResponse = $this->getService('http.response');
-		$service->httpRequest = $this->getService('http.request');
-		$service->invalidLinkMode = 5;
-		$service->setCorsUrl(['http://localhost:4200', 'http://localhost']);
-		return $service;
-	}
-
-
-	public function createService09(): App\ApiModule\V1Module\Presenters\ItemsPresenter
+	public function createService08(): App\ApiModule\V1Module\Presenters\ItemsPresenter
 	{
 		$service = new App\ApiModule\V1Module\Presenters\ItemsPresenter;
 		$service->injectPrimary(
@@ -277,6 +217,7 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 		$service->itemService = $this->getService('06');
 		$service->httpResponse = $this->getService('http.response');
 		$service->httpRequest = $this->getService('http.request');
+		$service->basicFilters = $this->getService('basicFilter');
 		$service->activitiesModel = $this->getService('04');
 		$service->invalidLinkMode = 5;
 		$service->setCorsUrl(['http://localhost:4200', 'http://localhost']);
@@ -284,7 +225,7 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 	}
 
 
-	public function createService010(): App\ApiModule\V1Module\Presenters\OptionsPresenter
+	public function createService09(): App\ApiModule\V1Module\Presenters\OptionsPresenter
 	{
 		$service = new App\ApiModule\V1Module\Presenters\OptionsPresenter;
 		$service->injectPrimary(
@@ -313,312 +254,6 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 			[
 				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
 					'onMatch' => null,
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Users',
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
-						'POST' => false,
-						'GET' => 'readAll',
-						'PUT' => false,
-						'DELETE' => false,
-						'OPTIONS' => false,
-						'PATCH' => false,
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00default_actions" => [
-						'POST' => 'create',
-						'GET' => 'read',
-						'PUT' => 'update',
-						'DELETE' => 'delete',
-						'OPTIONS' => 'options',
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
-					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/users',
-					"\x00*\x00method" => 'GET',
-					"\x00*\x00parameters" => [],
-					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
-					"\x00*\x00priority" => 0,
-					"\x00*\x00format" => 'json',
-					"\x00*\x00example" => null,
-					"\x00*\x00section" => null,
-					"\x00*\x00tags" => [],
-					"\x00*\x00response_codes" => [],
-					"\x00*\x00disable" => false,
-				]),
-				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
-					'onMatch' => null,
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Users',
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
-						'POST' => false,
-						'GET' => 'readCurrent',
-						'PUT' => false,
-						'DELETE' => false,
-						'OPTIONS' => false,
-						'PATCH' => false,
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00default_actions" => [
-						'POST' => 'create',
-						'GET' => 'read',
-						'PUT' => 'update',
-						'DELETE' => 'delete',
-						'OPTIONS' => 'options',
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
-					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/users/current',
-					"\x00*\x00method" => 'GET',
-					"\x00*\x00parameters" => [],
-					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
-					"\x00*\x00priority" => 0,
-					"\x00*\x00format" => 'json',
-					"\x00*\x00example" => null,
-					"\x00*\x00section" => null,
-					"\x00*\x00tags" => [],
-					"\x00*\x00response_codes" => [],
-					"\x00*\x00disable" => false,
-				]),
-				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
-					'onMatch' => null,
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Users',
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
-						'POST' => false,
-						'GET' => 'read',
-						'PUT' => false,
-						'DELETE' => false,
-						'OPTIONS' => false,
-						'PATCH' => false,
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00default_actions" => [
-						'POST' => 'create',
-						'GET' => 'read',
-						'PUT' => 'update',
-						'DELETE' => 'delete',
-						'OPTIONS' => 'options',
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
-					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/users/<id>',
-					"\x00*\x00method" => 'GET',
-					"\x00*\x00parameters" => ['id' => ['requirement' => '\d+']],
-					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
-					"\x00*\x00priority" => 0,
-					"\x00*\x00format" => 'json',
-					"\x00*\x00example" => null,
-					"\x00*\x00section" => null,
-					"\x00*\x00tags" => [],
-					"\x00*\x00response_codes" => [],
-					"\x00*\x00disable" => false,
-				]),
-				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
-					'onMatch' => null,
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Users',
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
-						'POST' => false,
-						'GET' => false,
-						'PUT' => false,
-						'DELETE' => false,
-						'OPTIONS' => false,
-						'PATCH' => 'patchCurrent',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00default_actions" => [
-						'POST' => 'create',
-						'GET' => 'read',
-						'PUT' => 'update',
-						'DELETE' => 'delete',
-						'OPTIONS' => 'options',
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
-					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/users/current',
-					"\x00*\x00method" => 'PATCH',
-					"\x00*\x00parameters" => [],
-					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
-					"\x00*\x00priority" => 0,
-					"\x00*\x00format" => 'json',
-					"\x00*\x00example" => null,
-					"\x00*\x00section" => null,
-					"\x00*\x00tags" => [],
-					"\x00*\x00response_codes" => [],
-					"\x00*\x00disable" => false,
-				]),
-				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
-					'onMatch' => null,
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Users',
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
-						'POST' => 'create',
-						'GET' => false,
-						'PUT' => false,
-						'DELETE' => false,
-						'OPTIONS' => false,
-						'PATCH' => false,
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00default_actions" => [
-						'POST' => 'create',
-						'GET' => 'read',
-						'PUT' => 'update',
-						'DELETE' => 'delete',
-						'OPTIONS' => 'options',
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
-					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/users',
-					"\x00*\x00method" => 'POST',
-					"\x00*\x00parameters" => [],
-					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
-					"\x00*\x00priority" => 0,
-					"\x00*\x00format" => 'json',
-					"\x00*\x00example" => null,
-					"\x00*\x00section" => null,
-					"\x00*\x00tags" => [],
-					"\x00*\x00response_codes" => [],
-					"\x00*\x00disable" => false,
-				]),
-				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
-					'onMatch' => null,
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Users',
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
-						'POST' => false,
-						'GET' => false,
-						'PUT' => false,
-						'DELETE' => false,
-						'OPTIONS' => false,
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00default_actions" => [
-						'POST' => 'create',
-						'GET' => 'read',
-						'PUT' => 'update',
-						'DELETE' => 'delete',
-						'OPTIONS' => 'options',
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
-					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/users/<id>',
-					"\x00*\x00method" => 'PATCH',
-					"\x00*\x00parameters" => ['id' => ['requirement' => '\d+']],
-					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
-					"\x00*\x00priority" => 0,
-					"\x00*\x00format" => 'json',
-					"\x00*\x00example" => null,
-					"\x00*\x00section" => null,
-					"\x00*\x00tags" => [],
-					"\x00*\x00response_codes" => [],
-					"\x00*\x00disable" => false,
-				]),
-				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
-					'onMatch' => null,
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Users',
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
-						'POST' => false,
-						'GET' => false,
-						'PUT' => false,
-						'DELETE' => 'delete',
-						'OPTIONS' => false,
-						'PATCH' => false,
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00default_actions" => [
-						'POST' => 'create',
-						'GET' => 'read',
-						'PUT' => 'update',
-						'DELETE' => 'delete',
-						'OPTIONS' => 'options',
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
-					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/users/<id>',
-					"\x00*\x00method" => 'DELETE',
-					"\x00*\x00parameters" => ['id' => ['requirement' => '\d+']],
-					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
-					"\x00*\x00priority" => 0,
-					"\x00*\x00format" => 'json',
-					"\x00*\x00example" => null,
-					"\x00*\x00section" => null,
-					"\x00*\x00tags" => [],
-					"\x00*\x00response_codes" => [],
-					"\x00*\x00disable" => false,
-				]),
-				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
-					'onMatch' => null,
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Users',
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
-						'POST' => 'generateToken',
-						'GET' => false,
-						'PUT' => false,
-						'DELETE' => false,
-						'OPTIONS' => false,
-						'PATCH' => false,
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00default_actions" => [
-						'POST' => 'create',
-						'GET' => 'read',
-						'PUT' => 'update',
-						'DELETE' => 'delete',
-						'OPTIONS' => 'options',
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
-					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/users/token',
-					"\x00*\x00method" => 'POST',
-					"\x00*\x00parameters" => [],
-					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
-					"\x00*\x00priority" => 0,
-					"\x00*\x00format" => 'json',
-					"\x00*\x00example" => null,
-					"\x00*\x00section" => null,
-					"\x00*\x00tags" => [],
-					"\x00*\x00response_codes" => [],
-					"\x00*\x00disable" => false,
-				]),
-				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
-					'onMatch' => null,
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Users',
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
-						'POST' => false,
-						'GET' => false,
-						'PUT' => 'resetPassword',
-						'DELETE' => false,
-						'OPTIONS' => false,
-						'PATCH' => false,
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00default_actions" => [
-						'POST' => 'create',
-						'GET' => 'read',
-						'PUT' => 'update',
-						'DELETE' => 'delete',
-						'OPTIONS' => 'options',
-						'PATCH' => 'patch',
-					],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
-					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
-					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/users/password',
-					"\x00*\x00method" => 'PUT',
-					"\x00*\x00parameters" => [],
-					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
-					"\x00*\x00priority" => 0,
-					"\x00*\x00format" => 'json',
-					"\x00*\x00example" => null,
-					"\x00*\x00section" => null,
-					"\x00*\x00tags" => [],
-					"\x00*\x00response_codes" => [],
-					"\x00*\x00disable" => false,
-				]),
-				\Nette\PhpGenerator\Dumper::createObject('Ublaboo\ApiRouter\ApiRoute', [
-					'onMatch' => null,
 					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00presenter" => 'Api:V1:Items',
 					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00actions" => [
 						'POST' => false,
@@ -639,9 +274,9 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00formats" => ['json' => 'application/json', 'xml' => 'application/xml'],
 					"\x00Ublaboo\\ApiRouter\\ApiRoute\x00placeholder_order" => [],
 					"\x00*\x00description" => null,
-					"\x00*\x00path" => '/api/v1/items/<barcode>',
+					"\x00*\x00path" => '/api/v1/items/<param>',
 					"\x00*\x00method" => 'GET',
-					"\x00*\x00parameters" => ['barcode' => ['requirement' => '\d+']],
+					"\x00*\x00parameters" => ['param' => ['type' => 'string']],
 					"\x00*\x00parameters_infos" => ['requirement', 'type', 'description', 'default'],
 					"\x00*\x00priority" => 0,
 					"\x00*\x00format" => 'json',
@@ -657,25 +292,7 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__1(): App\Presenters\ActivityPresenter
-	{
-		$service = new App\Presenters\ActivityPresenter;
-		$service->injectPrimary(
-			$this,
-			$this->getService('application.presenterFactory'),
-			$this->getService('routing.router'),
-			$this->getService('http.request'),
-			$this->getService('http.response'),
-			$this->getService('session.session'),
-			$this->getService('security.user'),
-			$this->getService('latte.templateFactory')
-		);
-		$service->invalidLinkMode = 5;
-		return $service;
-	}
-
-
-	public function createServiceApplication__2(): App\Presenters\ApiErrorPresenter
+	public function createServiceApplication__1(): App\Presenters\ApiErrorPresenter
 	{
 		$service = new App\Presenters\ApiErrorPresenter;
 		$service->injectPrimary(
@@ -694,7 +311,7 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__3(): App\Presenters\Error4xxPresenter
+	public function createServiceApplication__2(): App\Presenters\Error4xxPresenter
 	{
 		$service = new App\Presenters\Error4xxPresenter;
 		$service->injectPrimary(
@@ -712,19 +329,19 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__4(): App\Presenters\ErrorPresenter
+	public function createServiceApplication__3(): App\Presenters\ErrorPresenter
 	{
 		return new App\Presenters\ErrorPresenter($this->getService('tracy.logger'));
 	}
 
 
-	public function createServiceApplication__5(): NetteModule\ErrorPresenter
+	public function createServiceApplication__4(): NetteModule\ErrorPresenter
 	{
 		return new NetteModule\ErrorPresenter($this->getService('tracy.logger'));
 	}
 
 
-	public function createServiceApplication__6(): NetteModule\MicroPresenter
+	public function createServiceApplication__5(): NetteModule\MicroPresenter
 	{
 		return new NetteModule\MicroPresenter($this, $this->getService('http.request'), $this->getService('routing.router'));
 	}
@@ -775,6 +392,12 @@ class Container_e0cf1c1dac extends Nette\DI\Container
 	public function createServiceAttributesValidator(): App\Utils\Json\AttributesValidator
 	{
 		return new App\Utils\Json\AttributesValidator;
+	}
+
+
+	public function createServiceBasicFilter(): App\Utils\Filters\BasicFilters
+	{
+		return new App\Utils\Filters\BasicFilters;
 	}
 
 

@@ -4,16 +4,13 @@
 namespace App\ApiModule\V1Module\Presenters;
 
 use App\Models\ActivitiesModel;
-use App\Models\Entities\ActivityEntity;
-use App\Models\Entities\ItemEntity;
-use App\Models\Entities\TimeActivityEntity;
 use App\Models\ItemsModel;
 use App\Services\ItemService;
+use App\Utils\Filters\BasicFilters;
 use App\Utils\Json\JsonValidator;
+use Nette\Application\AbortException;
 use Nette\Http\IResponse;
-use Nette\Utils\Json;
-use Ublaboo\ApiRouter\ApiRoute;
-
+use Ublaboo\ApiRouter\ApiRoute; //DO NOT REMOVE!
 
 /**
  * @ApiRoute(
@@ -46,56 +43,47 @@ class ItemsPresenter extends ModuleBasePresenter
 
     /**
      * @inject
+     * @var BasicFilters
+     */
+    public $basicFilters;
+
+    /**
+     * @inject
      * @var JsonValidator
      */
     public $jsonValidator;
 
     /**
      * @ApiRoute(
-     *    "/api/v1/items/<barcode>",
+     *    "/api/v1/items/<param>",
      *     method="GET",
      *     presenter="Api:V1:Items",
      *     parameters={
-     *        "barcode"={
-     *            "requirement": "\d+"
+     *        "param"={
+     *            "type": "string"
      *          }
      *       }
      * )
-     * @param $barcode
+     * @param $param
      * @throws \ApiException
-     * @throws \Nette\Application\AbortException
+     * @throws AbortException
      */
-    public function actionRead($barcode)
+    public function actionRead($param)
     {
-        $timeActivities = [];
-        $activities = $this->activitiesModel->getTableData($this->activitiesModel::TABLE);
-        $product = $this->itemService->getProduct($barcode);
+        $activitiesTable = $this->activitiesModel->getTableData($this->activitiesModel::TABLE);
+        if (!$activitiesTable) throw new \ApiException('Activities not found.', IResponse::S404_NOT_FOUND);
 
-        if ($activities && $product) {
-            $item = $this->itemsModel->findById($this->itemsModel::ITEMS_TABLE, $barcode);
+        if ($this->basicFilters->areNumbers($param)) {
+            $item = $this->itemsModel->findFirstByKey($this->itemsModel::ITEMS_TABLE, 'id', $param);
             if (!$item) {
-                $itemQuantity = $this->itemService->getProductQuantity($product);
-                $itemCalories = $this->itemService->getProductCalories($product) * $itemQuantity;
-                $itemName = $this->itemService->getProductName($product);
-                $itemImage = $this->itemService->getProductImage($product);
-                for ($i = 0; $i < count($activities); $i++) {
-                    $actEntity = new TimeActivityEntity($activities[$i]);
-                    $actEntity->setTime($itemCalories / $actEntity->getEnergy());
-                    array_push($timeActivities, $actEntity);
-                }
-                $item = new ItemEntity();
-                $item->setActivities($timeActivities);
-                $item->setId($barcode); //todo
-                $item->setCalories($itemCalories);
-                $item->setName($itemName);
-                $item->setImage($itemImage);
-
-                $itemArray = $item->toArray();
-                $this->itemsModel->insert($this->itemsModel::ITEMS_TABLE, $itemArray);
+                $item = $this->itemService->getItem($param, $activitiesTable);
+                $this->itemsModel->insertToTable($this->itemsModel::ITEMS_TABLE, $item);
             }
-            $this->sendJson($item);
         } else {
-            throw new \ApiException('Activities not found.', IResponse::S404_NOT_FOUND);
+            $item = $this->itemsModel->findFirstByRegex($this->itemsModel::ITEMS_TABLE, 'name', $param);
+            if (!$item) throw new \ApiException('Product not found.', IResponse::S404_NOT_FOUND);
         }
+        $this->sendJson($item);
     }
+
 }

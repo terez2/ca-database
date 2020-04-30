@@ -94,6 +94,16 @@ class ItemEntity extends BaseEntity
     }
 
 
+    public function setAllAttributes($id, $name, $activities, $calories, $image)
+    {
+        $this->setId($id);
+        $this->setActivities($activities);
+        $this->setName($name);
+        $this->setCalories($calories);
+        $this->setImage($image);
+
+    }
+
     /**
      * @return array
      */

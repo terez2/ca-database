@@ -42,6 +42,9 @@
         attributesValidator:
              class: App\Utils\Json\AttributesValidator
 
+        basicFilter:
+             class: App\Utils\Filters\BasicFilters
+
     extensions:
        apiRouter: Ublaboo\ApiRouter\DI\ApiRouterExtension
 

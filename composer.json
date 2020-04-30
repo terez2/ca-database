@@ -34,8 +34,9 @@
 		"dg/adminer-custom": "^1.8",
 		"mongodb/mongodb": "^1.6",
 		"ublaboo/api-router": "^3.0",
-		"justinrainbow/json-schema": "^5.2"
-	},
+		"justinrainbow/json-schema": "^5.2",
+      "ext-mongodb": "*"
+    },
 	"require-dev": {
 		"nette/tester": "^2.0",
 		"phpstan/phpstan-nette": "^0.12"

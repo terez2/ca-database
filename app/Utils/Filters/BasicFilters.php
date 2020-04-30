@@ -30,6 +30,10 @@ class BasicFilters {
         return "+{$formattedNumber}";
     }
 
+    public static function areNumbers($value){
+        return preg_match('/\d+/', $value);
+    }
+
 
 }
 
