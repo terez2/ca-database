@@ -9,8 +9,10 @@ services:
       - "./:/var/www/html"
   mongo:
     image: mongo:latest
+    restart: always
+    container_name: 'ca-mongo-container'
     environment:
-      MONGO_INITDB_ROOT_USERNAME: "root"
+      MONGO_INITDB_ROOT_USERNAME: "ca"
       MONGO_INITDB_ROOT_PASSWORD: "123456"
       MONGO_INITDB_DATABASE: "ca"
       MONGODB_USER: "ca"
@@ -19,4 +21,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - ./src/db/seed/:/docker-entrypoint-initdb.d/init.js:ro
+#      - ./src/db/seed/:/docker-entrypoint-initdb.d/init.js:ro
+      - dbdata:/var/lib/mongodb
+volumes:
+  dbdata:
